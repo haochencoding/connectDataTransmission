@@ -134,8 +134,7 @@ Enable `Allow implicit grant`, this allows us to send data without user granting
 
 Second, you will need a session token to get an access token. You can either go into your account on [Connect](https://connect-project.io/) and copy it directly. Alternatively, we can send a form containing your username and password to the API to log into the Connect to obtain an session token. Note this approach only works for users who direc created an account on Connect. It does not work for users who log in using Google or GitHub accounts. 
 
-To log in via API request, create a POST request to `https://connect-project.io/parse/login`. In the request body, select the `x-www-form-urlencoded` format for data. Enter username (your username), password (your password), and _ApplicationId in the format as follows. 
-
+To log in via API request, create a POST request to `https://connect-project.io/parse/login`. In the request body, select the `x-www-form-urlencoded` format for data. Enter username (your username), password (your password), and _ApplicationId in the format as follows. Note that sending username and password via x-www-form-urlencoded is not very secure. We advise only using this for testing purpose.
 
 Once you send the requst to the API, it will return you a response that contains a session token. 
 
